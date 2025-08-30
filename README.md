@@ -1,4 +1,4 @@
-# 🌸 Meyme - AI Voice Agent
+# 🌸  AI Voice Agent
 
 > A cozy, modern AI voice companion with personality — built for the 30 Days of AI Voice Agents Challenge by Murf AI
 
@@ -8,9 +8,9 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS)
 
-## 🎯 What is Meyme?
+## 🎯 What is AI Voice Agent?
 
-Meet **Meyme** — she's not just another AI assistant. She's a fiercely loyal, cozy, and cunning cat companion with a lethal streak of sass. Built with cutting-edge voice AI technology, Meyme brings personality to every conversation. She's warm and affectionate with her owner Athar, but everyone else? Well, let's just say you're probably wasting her precious nap time.
+Meet **AI Voice Agent** — she's not just another AI assistant. She's a fiercely loyal, cozy, and cunning cat companion with a lethal streak of sass. Built with cutting-edge voice AI technology, Meyme brings personality to every conversation. She's warm and affectionate with her owner Athar, but everyone else? Well, let's just say you're probably wasting her precious nap time.
 
 Think of her as your personal AI cat who happened to master human speech — and she's got *opinions*.
 
@@ -233,4 +233,4 @@ This project is part of the 30 Days of AI Voice Agents Challenge. Feel free to f
 
 ---
 
-*Ready to chat with Meyme? Fire up the server and let the sass begin! 🐱✨*
+*Ready to chat with AI Voice Agent? Fire up the server and let the sass begin! 🐱✨*
