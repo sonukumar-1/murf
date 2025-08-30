@@ -1,0 +1,485 @@
+/* 🌸 Meyme - Cozy Glassmorphism Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #d299c2 0%, #fef9d3 30%, #e8cbc0 60%, #d299c2 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Floating particles background animation */
+.floating-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-particles::before,
+.floating-particles::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(210, 153, 194, 0.15), rgba(232, 203, 192, 0.08));
+    animation: float 20s ease-in-out infinite;
+}
+
+.floating-particles::before {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-particles::after {
+    bottom: 25%;
+    right: 15%;
+    animation-delay: 10s;
+    background: radial-gradient(circle, rgba(254, 249, 211, 0.2), rgba(210, 153, 194, 0.1));
+    width: 300px;
+    height: 300px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-3deg);
+    }
+    75% {
+        transform: translateY(-25px) rotate(2deg);
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Main chat container with glassmorphism */
+.chat-container {
+    width: 100%;
+    max-width: 650px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    height: 88vh;
+    position: relative;
+    margin: auto;
+}
+
+.glassmorphism {
+    background: rgba(245, 242, 235, 0.25);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 248, 240, 0.3);
+    box-shadow: 0 8px 32px rgba(210, 200, 185, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glassmorphism-inner {
+    background: rgba(250, 248, 245, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 248, 240, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glassmorphism-btn {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.glassmorphism-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Breathing animation for the main container */
+.breathing {
+    animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Avatar styling */
+.avatar-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+.avatar-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.avatar-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff9a8b, #a18cd1, #26c6da);
+    opacity: 0.6;
+    z-index: 1;
+    animation: avatarGlow 3s ease-in-out infinite;
+}
+
+@keyframes avatarGlow {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.breathing-gentle {
+    animation: breatheGentle 3s ease-in-out infinite;
+}
+
+@keyframes breatheGentle {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+/* Header styling */
+.chat-header {
+    position: relative;
+}
+
+.app-title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.3rem;
+}
+
+.app-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.settings-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Chat log styling */
+.chat-log {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chat-log::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-log::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.chat-log::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #a18cd1, #ff9a8b);
+    border-radius: 10px;
+}
+
+/* Message styling */
+.message {
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    max-width: 80%;
+    word-wrap: break-word;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: messageSlideIn 0.5s ease-out;
+}
+
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message.user {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #5d4e75;
+    align-self: flex-end;
+    margin-left: auto;
+    font-weight: 600;
+}
+
+.message.assistant {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    align-self: flex-start;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Record button styling */
+.record-btn {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d299c2 0%, #e8cbc0 100%);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(210, 153, 194, 0.3);
+}
+
+.record-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(210, 153, 194, 0.4);
+    background: linear-gradient(135deg, #d9a5cd 0%, #ebd1c5 100%);
+}
+
+.record-btn.recording {
+    background: linear-gradient(135deg, #ff9ec7 0%, #ffd6e8 100%);
+    animation: recordingPulse 1.5s infinite, recordingGlow 2s ease-in-out infinite;
+}
+
+.record-btn.thinking {
+    background: linear-gradient(135deg, #c9a8db 0%, #e0c4e8 100%);
+    animation: thinkingPulse 1s ease-in-out infinite;
+}
+
+.record-btn.speaking {
+    background: linear-gradient(135deg, #ffb8c6 0%, #ffd4d4 100%);
+    animation: speakingWave 0.8s ease-in-out infinite;
+}
+
+@keyframes recordingPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(38, 198, 218, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(38, 198, 218, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(38, 198, 218, 0);
+    }
+}
+
+@keyframes recordingGlow {
+    0%, 100% {
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        border-color: rgba(38, 198, 218, 0.8);
+    }
+}
+
+@keyframes thinkingPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes speakingWave {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Status display */
+.status-display {
+    font-size: 1rem;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Modal styling */
+.modal-content {
+    background: linear-gradient(135deg, rgba(253, 244, 227, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(118, 75, 162, 0.2);
+    color: #5d4e75;
+}
+
+.modal-title {
+    font-weight: 700;
+    color: #764ba2;
+}
+
+.modal-body {
+    color: #5d4e75;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(161, 140, 209, 0.3);
+    border-radius: 15px;
+    color: #5d4e75;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #a18cd1;
+    box-shadow: 0 0 0 0.2rem rgba(161, 140, 209, 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 15px;
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46a3 100%);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border: none;
+    border-radius: 15px;
+    color: #5d4e75;
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #fde8c4 0%, #faa085 100%);
+    color: #5d4e75;
+    transform: translateY(-2px);
+}
+
+/* Additional cozy elements */
+.chat-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff9a8b, #a18cd1, #26c6da, #ffecd2);
+    border-radius: 27px;
+    z-index: -1;
+    opacity: 0.3;
+    animation: borderGlow 4s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .chat-container {
+        margin: 1rem;
+        padding: 1.5rem;
+        height: 90vh;
+    }
+    
+    .avatar-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .app-title {
+        font-size: 1.8rem;
+    }
+    
+    .record-btn {
+        width: 75px;
+        height: 75px;
+        font-size: 1.5rem;
+    }
+}

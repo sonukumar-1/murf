@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌸 Meyme - Cozy AI Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/736x/70/aa/5b/70aa5b9544ef08fbac01f4d50898d2c5.jpg">
+</head>
+<body>
+    <div class="floating-particles"></div>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="chat-container glassmorphism breathing">
+            <div class="chat-header text-center mb-2">
+                <div class="avatar-container">
+                    <img src="https://i.pinimg.com/736x/70/aa/5b/70aa5b9544ef08fbac01f4d50898d2c5.jpg" 
+                         alt="Meyme Avatar" class="avatar-img breathing-gentle" id="avatarImg">
+                    <div class="avatar-glow"></div>
+                </div>
+                <h2 class="app-title">🌸 Meyme</h2>
+                <p class="app-subtitle">Mmm, Quit talking… my nap can't wait.</p>
+                <button id="settingsBtn" class="settings-btn glassmorphism-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+            <div id="chat-log" class="chat-log glassmorphism-inner"></div>
+            <div class="chat-input-container text-center mt-2">
+                <button id="recordBtn" class="record-btn glassmorphism-btn">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <div id="statusDisplay" class="status-display">Ready for a cozy chat! 😴</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="murfApiKey" class="form-label">MURF API Key</label>
+                        <input type="password" class="form-control" id="murfApiKey" placeholder="Enter your Murf API key">
+                    </div>
+                    <div class="mb-3">
+                        <label for="assemblyAiApiKey" class="form-label">AssemblyAI API Key</label>
+                        <input type="password" class="form-control" id="assemblyAiApiKey" placeholder="Enter your AssemblyAI API key">
+                    </div>
+                    <div class="mb-3">
+                        <label for="geminiApiKey" class="form-label">Gemini API Key</label>
+                        <input type="password" class="form-control" id="geminiApiKey" placeholder="Enter your Gemini API key">
+                    </div>
+                    <div class="mb-3">
+                        <label for="serpApiKey" class="form-label">SerpAPI API Key</label>
+                        <input type="password" class="form-control" id="serpApiKey" placeholder="Enter your SerpAPI API key">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveKeysBtn">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
